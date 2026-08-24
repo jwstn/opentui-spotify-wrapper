@@ -18,4 +18,4 @@ Single-context: root `CONTEXT.md` glossary + `docs/adr/` for decisions. See `doc
 
 ## Best Pratices
 
-Keep an eye on the opentui-react-effect-best-pratices.md for a clean style
+Keep an eye on the opentui-react-effect-best-pratices.md and http-server.md for a clean style
