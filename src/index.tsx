@@ -37,7 +37,10 @@ function Bootstrap() {
 			void Promise.all([import("@effect/atom-react"), import("./App")]).then(
 				([atomReact, app]) => {
 					if (cancelled) return
-					setAppBundle({ RegistryProvider: atomReact.RegistryProvider, App: app.App })
+					setAppBundle({
+						RegistryProvider: atomReact.RegistryProvider,
+						App: app.App,
+					})
 				},
 				(error: unknown) => {
 					if (cancelled) return
