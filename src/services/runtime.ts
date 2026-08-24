@@ -1,5 +1,4 @@
-import { Effect, Console } from "effect"
+import * as Atom from "effect/unstable/reactivity/Atom"
+import { DemoService } from "./DemoService"
 
-const program = Console.log("Hello, World!")
-
-export const result = Effect.runSync(program) // => undefined
+export const spotifyRuntime = Atom.runtime(DemoService.layerNoDeps)
