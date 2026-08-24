@@ -4,14 +4,21 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run --watch src/index.tsx"
+    "dev": "bun run --watch src/index.tsx",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint --tsconfig tsconfig.json src/ test/",
+    "format": "oxfmt src/ test/",
+    "format:check": "oxfmt --check src/ test/",
+    "test": "bun test"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
     "react-devtools-core": "7"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "@effect/atom-react": "^4.0.0-beta.107",
